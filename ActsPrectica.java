@@ -3,6 +3,14 @@ package actividad_3;
 import java.util.Scanner;
 
 public class ActsPrectica {
+
+    public static boolean Orden(int[] arreglo) {
+        for (int i = 1; i < arreglo.length; i++){
+            if (arreglo[i] < arreglo[i - 1]){
+                return false;
+            }
+        }
+    }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -39,10 +47,77 @@ public class ActsPrectica {
         System.out.print("dame un numero entero: ");
         int numEntx = sc.nextInt();
         
-        for (int i = 0; i < 10; i++)
+        for (int i = 1; i < 10; i++)
             System.out.println( + numEntx + " x " + i + " = " + (numEntx * i));
 
-        sc.close();
+        //parte 4
 
+        int cal;
+
+        do{
+            System.out.println("cuantas calificaciones quieres poner: ");
+            cal = sc.nextInt();
+        } while (cal < 1 || cal > 10);
+
+
+            double[] cali = new double[cal];
+            double suma = 0;
+            int apro = 0;
+            int repro = 0;
+        for (int i = 0; i < cal; i++){
+
+            System.out.print("dime la calificacion: ");
+            cali[i] = sc.nextDouble();
+            suma += cali[i];
+            if (cali[i] >= 70) {
+                apro++;
+            } else {
+                repro++;
+            }
+        }
+
+        double prome = suma/cal;
+
+        System.out.println("tu promedio es de " + prome);
+        System.out.println("tus calidicaciones aprovadas son " + apro);
+        System.out.println("tus calificaciones reprovadas son " + repro);
+        sc.nextLine();
+
+        //parte 5
+        System.out.print("ingresa una palabra: ");
+        String pal = sc.nextLine();
+
+        pal = pal.toLowerCase();
+
+        int voca = 0;
+        int cons = 0;
+
+        for (int i = 0; i < pal.length(); i++) {
+            char c = pal.charAt(i);
+
+            if (Character.isLetter(c)) {
+
+                if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+                    voca++;
+                } else {
+                    cons++;
+                }
+
+            }
+        System.out.println("cantidad de vocales: " + voca);
+        System.out.println("cantidad de consonantes: " + cons);
+
+        //parte 6
+        System.out.println("dame un numero (1 al 10): ");
+        numee = sc.nextInt();
+        
+        for (int e = 0; e < numee(); e++); {}
+            
+
+
+
+        }
+        sc.close();
     }
 }
+
