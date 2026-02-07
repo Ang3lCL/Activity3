@@ -441,7 +441,8 @@ public class ActsPrectica {
 
 
         //parte 12
-          System.out.print("Ingresa una frase: ");
+        sc.nextLine();
+        System.out.print("Ingresa una frase: ");
         String frase = sc.nextLine();
 
         String limpia = "";
@@ -515,8 +516,8 @@ public class ActsPrectica {
         }
 
         //parte 14
-        String user = "admin";
-        int contra = 1234;
+        String user = "yo:v";
+        int contra = 1404;
 
         boolean acceso = false;
 
