@@ -50,7 +50,7 @@ public class ActsPrectica {
                 break;
             } catch (Exception e) {
                 System.out.println("Error: debes escribir un número entero.");
-                sc.nextLine(); // limpiar buffer
+                sc.nextLine();
             }
         }
 
